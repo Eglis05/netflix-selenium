@@ -73,6 +73,7 @@ class NetflixLogin():
         search_box.send_keys(movie)
         time.sleep(1)
         names = browser.find_elements_by_class_name('slider-refocus')
+        browser.get(URL)
         for i in range(nr_checkings):
             name = names[2 * i + 1].get_attribute('aria-label')
             print(name)
